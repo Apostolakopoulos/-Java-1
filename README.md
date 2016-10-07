@@ -36,3 +36,23 @@ public class apples {
 			System.out.println(face + "\t" + freq[face]);//emfanizei thn suxnothta 			
 		}
 	}
+
+#Methods with Arrays
+	public static void main(String args[]){
+		int stef[]= {9,10,22,34};//dhmiourgeia pinaka
+		
+		change(stef);//kalei th methodo
+		
+		for(int y : stef){//enhanced loop diaforetikos tropos loop gia pinakes
+			System.out.println(y);
+		}
+		
+	}
+	
+	public static void change(int x[]){//methodos
+		
+		for(int counter=0; counter<x.length; counter++){
+			x[counter]+=5;			
+		}
+		
+	}
