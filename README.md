@@ -45,14 +45,32 @@ public class apples {
 		
 		for(int y : stef){//enhanced loop diaforetikos tropos loop gia pinakes
 			System.out.println(y);
-		}
-		
+		}		
 	}
 	
 	public static void change(int x[]){//methodos
 		
 		for(int counter=0; counter<x.length; counter++){
 			x[counter]+=5;			
-		}
+		}		
+	}
+#Print multidimational array with method
+
+	public static void main(String args[]){
+		int stef1 [][] ={{8,9,10,11},{12,13,14,15}};//dhmiourgeia tou poludiastatou pinaka me grammes
+		int stef2 [][] ={{30,31,32,33},{43},{4,5,6}};
 		
+		System.out.println("This is the first array...");
+		display(stef1);//kaleite h methodos display
+		
+		System.out.println("This is the second array...");
+		display(stef2);
+	}
+	public static void display(int x[][]){
+		for(int row = 0; row < x.length; row++){//gia th grammh 1
+			for(int column = 0; column < x[row].length; column++){//gia th sthlh 1-4 (8,9,10,11)
+				System.out.print(x[row][column]+"\t");// "/t":gia apostash metaksei ton arithmwn
+			}
+			System.out.println();
+		}
 	}
