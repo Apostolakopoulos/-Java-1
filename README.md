@@ -56,3 +56,49 @@
 			System.out.println();
 		}
 	}
+
+#To String Method and Composition
+ Μέθοδος To String και Composition
+ 
+		 public class apples {
+			public static void main(String args[]){
+				potpie potpieobject =new potpie(4 , 5 , 6);
+				tuna tunaobject = new tuna("Stefanos" , potpieobject );
+				System.out.println(tunaobject);
+			} 
+		}
+		
+		public class tuna {
+		private String name;
+		private potpie birthday;//reference sto potpie object
+
+		public tuna (String thename ,potpie theday){		
+			name =  thename;
+			birthday = theday;
+		}
+		public String toString(){
+			return String.format("My name is %s my birthday is %s", name, birthday);// to name tha mpei kanonika afou einai 			//string
+			//to birthday einai reference to an object paei sth klash potpie kai paei sthn toString methodo ths kai meta
+			//dinei tis plhrofories pou xreiazetai
+			}
+		}
+		public class potpie {
+		private int month;
+		private int day;
+		private int year;
+
+		public potpie(int m,int d,int y){
+			month = m;
+			day = d;
+			year = y;
+			System.out.printf("The constractor for this is %s\n", this);//to this shmatodotei oti thelei ena string 
+			//anaferetai sto shgkekrimeno object uponoei oti xrieazetai ena string kai afou to xriazetai
+			//gi auto tou dinetai apo katw hh to String.		
+
+		}
+
+		public String toString(){
+			return String.format("%d/%d/%d", month, day, year);
+		}
+
+	}
