@@ -101,4 +101,45 @@
 			return String.format("%d/%d/%d", month, day, year);
 		}
 
+		}
+#Enumarations-Enum setRange
+
+	public class apples {
+		public static void main(String args[]){
+			for(tuna people: tuna.values()){//tuna object me onoma people
+				System.out.printf("%s\t%s\t%s\n", people,people.getdesc(),people.getyear());
+				/*% bazei sth thesh tou tous people \t kanei tab %s bazei to getdesc \t tab %s
+				 * bazei to getyear \n allagh grammhs*/
+			}
+			System.out.println("And now for the range of constans");
+			for(tuna people: EnumSet.range(tuna.zwh,tuna.cole)){
+				System.out.printf("%s\t%s\t%s\n", people,people.getdesc(),people.getyear());
+			}
+		} 
+	}
+	
+	public enum tuna {//tupos enum epitrepei sth metablhth na exei ena sunolo prokathorismenwn statherwn 
+
+		Stef ("ole","23"),//people
+		zwh ("kalh","14"),//desc
+		elenh ("gia to peos","24"),//kai year
+		cole("italia","13"),
+		candy("Diferense","14"),
+		aren("I wish","16");
+
+		private final String desc;//final xrhsimopoieitai mono mia fora
+		private final String year;
+
+		tuna (String desciption ,String  age ){ //Constructor
+			desc = desciption ;
+			year = age ;
+		}
+
+		public String getdesc(){
+			return desc;
+		}
+
+		public String getyear(){
+			return year;
+		}
 	}
