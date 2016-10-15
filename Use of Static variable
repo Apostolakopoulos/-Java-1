@@ -1,1 +1,46 @@
+#Use of Static variable
+Χρήση σταθερής μεταβλητής
 
+	public class apples {
+		public static void main(String args[]){
+			tuna object = new tuna("Megan","Fox");//constructor ths tuna
+			tuna object2 = new tuna("Anjelina","Jolie");
+			tuna object3 = new tuna("Araphs","tamtam");
+
+			System.out.println();
+
+			System.out.println(object.getfirst());
+			System.out.println(object.getlastname());
+			System.out.println(object.getnumber());//Dinei ton arithmo meta thn tropopoihsh tou programmatos
+
+			System.out.println(tuna.getnumber());//dinetai kai auth h dunatothta me thn static einai idio me to apo
+			//panw alla xwris dhmiourgeia object
+
+
+
+		} 
+	} 
+	public class tuna {
+
+		private String name;
+		private String lastname;
+		private static int number = 0;//Dhlwsh number san static metablhth
+
+		public tuna(String a, String b){//constructor
+			name = 	a;
+			lastname = b;
+			number ++ ;
+			System.out.printf("The name of babe is %s the lastname of her is %s and the number of"
+					+ " the members is %s \n",name, lastname, number );
+		}
+
+		public String getfirst(){
+			return name;
+		}
+		public String getlastname(){
+			return lastname;
+		}
+		public static int getnumber(){
+			return number;
+		}
+	}
