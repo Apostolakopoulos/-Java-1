@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Sample {
+	public static void main(String args[]){
+	int x = 1 ;
+	do{//if a dump user can't get it right it is going to run it again and again until he get it 
+		try{	
+			Scanner input = new Scanner (System.in);	
+			System.out.println("Enter First number : ");
+			int n1 = input.nextInt();	
+			System.out.println("Enter Second number : ");
+			int n2 = input.nextInt();	
+			int sum = n1/n2;	
+			System.out.println(sum);
+			x=2;
+		}catch(Exception e){		
+			System.out.println("You can't do this...");
+		}
+	}while(x==1);	
+	
+	}
+}
