@@ -1,0 +1,37 @@
+public class apples {
+	public static void main(String args[]){		
+		Animals[] thelist = new Animals[2];//pinakas pou apothikeyei objects
+		
+		Dog d = new Dog();//dog object
+		Fish f = new Fish();//fish object
+		
+		thelist[0] = d;//bazw to d object sth thesh 0
+		thelist[1] = f;//bazw to f object sth thesh 1
+		
+		for(Animals x : thelist) {//tha kanei loop olo ton pinaka
+			x.noise();//tha ektelesei thn noise se kathe class 		
+		}
+		
+	}
+}
+public class Dog extends Animals{
+	
+	public void noise(){
+		System.out.println("Bark...");
+	}
+	
+}
+public class Fish extends Animals{
+	
+	public void noise(){
+		System.out.println("Glurp...");
+	}
+	
+}
+public class Animals {
+	
+	public void noise(){
+		System.out.println("Animals dont make noise...");
+	}
+	
+}
